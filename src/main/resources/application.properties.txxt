@@ -1,0 +1,12 @@
+server.port=8088
+server.servlet.context-path=/life
+#时间日期格式
+spring.mvc.date-format=yyyy-MM-dd
+#格式化日期格式
+spring.jackson.date-format=yyyy-MM-dd
+#时区
+spring.jackson.time-zone=GMT+8
+image.path=image.qf.test.com
+#springboot默认日志
+#logging.file=F://log//2020.log
+#logging.level.root=error
