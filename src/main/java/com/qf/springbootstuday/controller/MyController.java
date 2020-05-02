@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -17,7 +18,6 @@ import java.util.Date;
 public class MyController {
     @Value("${image.path}")
     private String IMAGE_PATH;
-
     private Logger logger= LoggerFactory.getLogger(MyController.class);
     @RequestMapping("hello")
     @ResponseBody
@@ -37,4 +37,11 @@ public class MyController {
         return  date;
 
     }
+    @RequestMapping("hi")
+    public String hi(Model model){
+        model.addAttribute("name","张三");
+        model.addAttribute("age",16);
+        return "hi";
+    }
+
 }

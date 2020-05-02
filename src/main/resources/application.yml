@@ -7,7 +7,7 @@ spring:
     date-format: yyyy-MM-dd
   jackson:
     date-format: yyyy-MM-dd
-
     time-zone: GMT+8
-image:
-  path: image.qf.test.com
+  profiles:
+    active: test
+
